@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skewed border design</title> 
+    <style>*{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; 
+        width: 100vw;
+        height: 100vh;
+        flex-direction: row;
+        background: #060c21; 
+        font-family: sans-serif;
+    } 
+    .back{
+        width: 25vw;
+        background: #060c21;
+        height: 60vh;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: left;
+    padding: 0 30px; 
+    border: 1px solid #000;
+    
+    }
+    .back::before{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px; 
+        z-index: -1; 
+        transform: skew(0deg, 0deg); 
+        pointer-events: none; 
+    background: linear-gradient(315deg,#ff0057,#e64a19);
+    transition: ease-in-out 0.5s;
+        } 
+        .back:hover::before{  
+            transform: skew(2deg, 2deg); 
+    
+        }
+        .back:nth-child(2)::before{
+            filter: hue-rotate(165deg);
+        }
+        .back:nth-child(3)::before{
+            filter: hue-rotate(215deg);
+        }
+        .back::after{
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: rgba(255, 255, 255, 0.041);  
+            width: 50%;
+            pointer-events: none;
+            }
+    .back h2{
+    font-size: 10em; 
+    position: absolute;
+    color: rgba(255,255,255,0.05); 
+    transition: 0.5s; 
+    top: 60px;
+    right:70px;
+    
+    }
+    .back:hover h2{ 
+        top: -15px;
+    }
+    
+    .back h3{ 
+        text-align: left;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        margin: 0 0 20px 0;
+        text-transform: capitalize;
+    }
+    .back p{
+    z-index: 5;
+    font-size: 16px;
+    color: #fff;
+    line-height:1.5em;
+    }
+    
+    .back a{
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        display: inline-block; 
+        top: 30px;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        overflow: hidden;
+        transform: translateY(-60px);
+        transition: 0.5s;
+        visibility: hidden;
+        opacity: 0; 
+    }
+    .back:hover a{
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    .back a:hover{
+        color: #000;
+        background-color: #fff;
+    }
+    a span{
+        position: absolute;
+        display: block;
+    }
+    a span:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgb(255, 255, 255));
+        animation: anime1 1s linear infinite;
+    }
+    @keyframes anime1{
+        0%{
+            left:-100%;
+        }
+        50%,100%{
+            left: 100%;
+        }
+    }
+    a span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, rgb(255, 255, 255));
+        animation: anime2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes anime2{
+        0%{
+            top:-100%;
+        }
+        50%,100%{
+            top: 100%;
+        }
+    }
+    
+    a span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, rgb(255, 255, 255));
+        animation: anime3 1s linear infinite;
+        animation-delay:0.5s;
+    }
+    @keyframes anime3{
+        0%{
+            right:-100%;
+        }
+        50%,100%{
+            right: 100%;
+        }
+    }
+    
+    a span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, rgb(255, 255, 255));
+        animation: anime4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes anime4{
+        0%{
+            bottom:-100%;
+        }
+        50%,100%{
+            bottom: 100%;
+        }  
+    } 
+    </style>
+</head>
+<body>
+    <section class="back">
+        <h2>01</h2>
+        <h3>part one</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ut inventore, ipsam vitae, facere aspernatur dignissimos ipsa provident,
+            alias harum velit nulla dolor! Nemo temporibus, sequi dolore debitis ab impedit reiciendis. 
+            <a href="#">
+                <span></span>
+                <span></span> 
+                <span></span> 
+                <span></span>
+            read more</a>
+        </p>
+    </section>
+    <section class="back">
+        <h2>02</h2>
+        <h3>part two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ut inventore, ipsam vitae, facere aspernatur dignissimos ipsa provident,
+            alias harum velit nulla dolor! Nemo temporibus, sequi dolore debitis ab impedit reiciendis. <a href="#">
+                <span></span>
+                <span></span> 
+                <span></span> 
+                <span></span>
+            read more</a>
+        </p>
+    </section>
+    <section class="back">
+        <h2>03</h2>
+        <h3>part three</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ut inventore, ipsam vitae, facere aspernatur dignissimos ipsa provident,
+            alias harum velit nulla dolor! Nemo temporibus, sequi dolore debitis ab impedit reiciendis. <a href="#">
+                <span></span>
+                <span></span> 
+                <span></span> 
+                <span></span>
+            read more</a>
+        </p>
+    </section>
+</body>
+</html>

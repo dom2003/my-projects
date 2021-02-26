@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>my form</title> 
+  <style>*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(90deg, #278BD7, #278BFD, #708BFD);
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    font-size: 18px; 
+  } 
+  #opening {
+    background-color: #195F94; 
+    padding: 5px;
+    border-radius: 5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    border: 2px #071C2D solid;
+    width: 60vw;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    margin: 30px;
+  }
+  #title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .para {
+    font-style: italic;
+  }
+  #survey-form {
+    background-color: #195F94;
+    border-radius: 5px;
+    width: 60vw; 
+    text-align: left;
+    border: 2px #071C2D solid; 
+    padding:30px 50px; 
+  }  
+  .common, label, .info {
+    display: block;
+  }
+  .common {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  } 
+  .info {
+    margin-top: 5px;
+    height: 35px;
+    width: 100%;
+    word-spacing: 2px;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-color: blue;  
+  } 
+  .par2 {
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  #dropdown {
+    width: 100%; 
+    font-size: 16px;
+    word-spacing: 2px;
+    border-radius: 10px;
+    border: 2px blue solid;
+    padding: 5px;
+    color: rgb(92, 92, 92);
+  }
+  .list {
+    font-size: 18px;
+    margin: 8px;
+  }
+  #bio {
+    width: 100%;
+    height: 20vh;
+    padding: 10px;
+    border: 2px blue solid;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  #button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #submit {
+    width: 50%;
+    height: 7vh;
+    background-color: #0E2539; 
+    color: #aaa; 
+    border: 2px blue solid;
+    font-size: 18px;
+    border-radius: 10px; 
+    transition: 0.5s; 
+    text-transform: uppercase;
+  }
+  #submit:hover{
+    width: 100%;
+    color: #eee;  
+  }
+  span {
+    color: #0E2539;
+  }
+  
+  
+  @media screen and (max-width: 960px){
+    #opening, #survey-form{
+      width: 80vw; 
+    } 
+  }
+  
+  @media screen and (max-width: 540px){
+    #opening, #survey-form{
+      width: 90vw; 
+    } 
+    #survey-form{
+      padding:30px;
+    }
+  }
+  
+  
+  
+  </style>
+</head>
+
+<body> 
+    <article id="opening">
+      <h1 id="title"><span>Student</span> survey form</h1>
+      <p class="para" id="description">Fill in the form</p>
+    </article>
+    <form id="survey-form"> 
+        <section>
+          <label for="name" id="name-label" class="common">Name<input class="info"  type="text" id="name" placeholder="enter name" required></label>
+          <label for="email" id="email-label" class="common">Email<input class="info" type="email" id="email" name="email" placeholder="enter email" required></label>
+          <label for="number" id="number-label" class="common">Age<input class="info" type="number" id="number" name="age" min="13" max="19" placeholder="select age"></label>
+        </section>
+        <section>
+          <label for="current-class">
+            <p class="par2">What class are you in?</p>
+            <select id="dropdown" class="common" name="current-class">
+              <option disabled selected> select current class</option>
+              <option value="JSS1">JSS1</option>
+              <option value="JSS2">JSS2</option>
+              <option value="JSS3">JSS3</option>
+              <option value="SSS1">SSS1</option>
+              <option value="SSS2">SSS2</option>
+              <option value="SSS3">SSS3</option>
+            </select>
+          </label>
+        </section>
+        <section>
+          <p class="par2">Select your gender</p>
+          <label for="male" class="list"><input type="radio" name="gender" id="male" value="male" checked>Male</label>
+          <label for="female" class="list"><input type="radio" name="gender" id="female" value="female">Female</label>
+          <label for="other" class="list"><input type="radio" name="gender" id="other" value="other">Other</label>
+        </section>
+        <section>
+          <p class="par2">Choose your favorite subjects <span>(select at least 3)</span></p>
+          <label for="mathematics" class="list"><input type="checkbox" name="fav-sub" value="mathematics">Mathematics</label>
+          <label for="english" class="list"><input type="checkbox" name="fav-sub" value="english">English</label>
+          <label for="geography" class="list"><input type="checkbox" name="fav-sub" value="geography">Geography</label>
+          <label for="economics" class="list"><input type="checkbox" name="fav-sub" value="economics">Economics</label>
+          <label for="biology" class="list"><input type="checkbox" name="fav-sub" value="biology">Biology</label>
+          <label for="physical education" class="list"><input type="checkbox" name="fav-sub" value="physical education">Physical Education</label>
+          <label for="book keeping" class="list"><input type="checkbox" name="fav-sub" value="book keeping">Book Keeping</label>
+          <label for="ICT" class="list"><input type="checkbox" name="fav-sub" value="ICT">ICT</label>
+          <label for="history" class="list"><input type="checkbox" name="fav-sub" value="history">History</label>
+          <label for="culture" class="list"><input type="checkbox" name="fav-sub" value="culture">Culture</label>
+        </section>
+        <section>
+          <p class="par2">Tell us a little about you</p>
+          <textarea name="bio" id="bio" class="common" placeholder="tell us a little about you"></textarea>
+        </section>
+        <section id="button">
+          <button type="submit" id="submit">submit</button>
+        </section> 
+    </form> 
+  <!-- logo link = https://images.app.goo.gl/NKv3LUCwmfmHs2Bv5 -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
+</body>
+
+</html>

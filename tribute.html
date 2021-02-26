@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ronnie</title> 
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: trebuchet  sans-serif serif;
+      }
+      *::first-letter{
+        text-transform: capitalize;
+      }
+      body{
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        background: linear-gradient(90deg, #afb8e3, #d0d4ed);
+        display: flex; 
+        align-items: center;
+        flex-direction: column;
+      }
+      header { 
+      min-width: 100vw;
+      text-align: center; 
+      background: linear-gradient(45deg, #4b2e57, #d0d4ed);
+      border-bottom:hsl(233, 100%, 20%) 5px solid;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-direction: column; 
+      padding: 20px;
+      }
+      header h1{
+        text-transform: capitalize;
+        word-spacing: 4px;
+        letter-spacing: 1.5px;
+        font-size: 60px;
+        font-weight: bolder; 
+      }
+      header p{
+      font-size: 20px;
+      font-style: oblique;
+      }
+      #img-div{
+        border-bottom:hsl(233, 100%, 20%) 5px solid;   
+      width: 100vw;
+      display: flex;
+      align-items: center; 
+      justify-content: center; 
+      flex-direction: column; 
+      }
+      #img-div img{ 
+        padding: 30px 0;
+        max-width: 80vw;
+      }
+      #img-div figcaption{
+        text-align: center;
+        font-size: 16px;
+      word-spacing: 2px;
+      padding: 5px; 
+      width: 100vw;
+      }
+      #opening{ 
+        width: 90vw;
+        display: flex;
+        align-items: center;  
+        justify-content: space-evenly;
+      flex-direction: column; 
+      padding: 50px 0 ;
+      }  
+      #opening p{
+        line-height: 30px;
+        margin-bottom: 20px;
+        word-spacing: 3px;
+        font-size: 16px; 
+      } 
+      #tribute-info{
+        margin-bottom: 20px;
+        width: 90vw;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+      }
+      #tribute-info h3{
+        font-size: 40px; 
+      }
+      #tribute-info ul{
+        line-height: 35px;
+        font-size: 16px;
+        text-align: center;
+        list-style: none;
+      } 
+      
+      span{
+        text-transform: uppercase;
+      font-family: monospace;
+       padding: 20px;
+      }
+      
+      footer{ 
+        background: linear-gradient(45deg, #4b2e57, #d0d4ed);
+        text-align: center;
+        padding: 10px 0;
+        width: 100vw; 
+        font-size: 16px;
+      border: hsl(233, 100%, 20%) 5px solid;
+      font-weight: bold;
+      }  
+      a{
+        text-decoration: none;
+        font-weight: bolder;
+        color:  hsl(233, 100%, 20%);
+        transition: 0.5s;
+      }
+      a:hover{
+        color: hsl(233, 100%, 60%); 
+      }
+      @media screen and (max-width: 650px){
+        #tribute-info h3{
+          font-size: 30px; 
+          text-align: center;
+        }
+        header h1{
+          text-transform: capitalize;
+          word-spacing: 4px;
+          letter-spacing: 1.5px;
+          font-size: 40px;
+          font-weight: bolder; 
+        }
+      }</style>
+  </head>
+    <body id="main">
+          <header id="title">
+                <h1>ronald nnadiukwu</h1>
+                <p>a role model among youths</p>
+          </header>
+          <figure id="img-div">
+                <img id="image" src="https://scontent.flos5-1.fna.fbcdn.net/v/t1.0-0/p640x640/52033970_2061474327262525_7170695857723932672_o.jpg?_nc_cat=110&ccb=3&_nc_sid=9e2e56&_nc_ohc=tUd4uTxDfgwAX9jJ4sy&_nc_ht=scontent.flos5-1.fna&tp=6&oh=dc95eb478e8f77b9c261cc40d35a63ab&oe=605A47C4" alt="photo of ronald getting ready for work">
+                <figcaption id="img-caption">ronald nnadiukwu, left, in studio with partners</figcaption>
+          </figure>
+          <figure id="opening">   
+                  <p>"Ronald is a seasoned corporate branding expert, with his expertise
+                    in Digital marketing, video editing, and the list is endless. He is a delight
+                    to work with, always learning new ways to improve and give his best.  He is a
+                    team player with a distinct and innovative ideology".<span>henry mcshawn</span> </p>
+                    <p>"As course mates. I'd never seen anyone so enthusiastic as ronald.
+                      Always striving to be the best in all he finds himself. 
+                      A man of integrity and perfect sight of the future happenings".<span>dominion cletus</span> </p>
+                      <p>"I would recommend him any day anytime.   He has a great personality and a charming aura which makes him an easy choice to work with.
+                       He is that guy you want in your team".
+                    <span> austin johnson</span> </p> 
+          </figure>
+          <section id="tribute-info">
+                <h3>here are some of his achievements</h3>
+                <ul>
+                    <li>Digital Media Partner for <a href="#">Ausso Leadership Academy</a> </li>
+                    <li> Corporate branding strategist <a href="#"> DeeZey Digital</a></li>
+                    <li>product design and development <a href="#"> 88apparelz</a></li>
+                    <li>Motion Graphic Artist / Media personnel <a href="#">InfoMall Nigeria Ltd</a> </li>
+                    <li>Project Management Intern <a href="#">energobuilding construction limited</a></li>
+                    <li>Bachelor's degreeProject Management <a href="#">Federal University of Technology Owerri</a> </li>
+                    <li>Video Editing Tutor <a href="#"> SouthCreek Centre </a></li>
+                    <li>First Aid Assistant <a href="#">Nigerian Red Cross</a>  </li>
+                    <li>Motion graphics tutor <a href="#">Southcreek centre</a></li>
+                    <li>Membership Certificate<a href="#"> Interaction Design Foundation</a></li>
+                    <li>digital skills: digital marketing <a href="#">Accenture</a></li>
+                    <li>UK-HSE level 1 (award in health and safety at work)<a href="#"> Novelle Center</a></li>
+                </ul>
+          </section>
+          <footer>
+            <p>If you have time, you should read more about this incredible human being on  
+                  <a id="tribute-link" href="https://web.facebook.com/pages/category/Public-Figure/Cletus-Ronald-1712593598817268/?_rdc=1&_rdr"  target="_blank">Facebook</a></p>
+          </footer>
+                  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"> 
+                  </script>
+    </body>
+    </html>
